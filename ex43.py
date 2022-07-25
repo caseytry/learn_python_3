@@ -45,17 +45,20 @@ class CentralCorridor(Scene):
         print(dedent("""
             Ho boy he typed a lot here and im short cutting so That
             i can try an see if it passes once this is made.
+            shoot
+            dodge
+            tell a joke
             """))
 
         action = input("> ")
 
-        if action == "shoot!":
+        if action == "shoot":
             print(dedent("""
                 we'll do this in a sec
                 """))
             return 'death'
 
-        elif action == "dodge!":
+        elif action == "dodge":
             print(dedent("""
                 We dodging and stuff happens
                 """))
