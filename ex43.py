@@ -94,7 +94,7 @@ class LaserWeaponArmory(Scene):
             guesses += 1
             guess = input("[keypad]> ")
             #for when want to have code to debug for now.
-            #print(f"btw code is {code}")
+            print(f"btw code is {code}")
         if guess == code:
             print(dedent("""
                 we did it and its open
@@ -113,12 +113,62 @@ class LaserWeaponArmory(Scene):
 class TheBridge(Scene):
 
     def enter(self):
-        pass
+        print(dedent("""
+            getting onto the bridge
+            more aliums
+            havent seen you, what to do
+            """))
+
+        action = input("> ")
+
+        if action == "throw the bomb":
+            print(dedent("""
+                in panic you toss it
+                but one of them gets ya
+                maybe will still win?
+                """))
+            return 'death'
+
+        elif action == "slowly place the bomb":
+                print(dedent("""
+                    place it carefully
+                    they dont notice
+
+                    go back through corridor
+                    get to the escape pod!
+                    """))
+                return 'escape_pod'
+        else:
+                print("invalid action")
+                return "the_bridge"
 
 class EscapePod(Scene):
 
     def enter(self):
-        pass
+        print(dedent("""
+            running through time to pick a pod
+            5 total, which one do you take?
+            """))
+        
+        good_pod = randint(1,5)
+        guess = input("[pod #]> ")
+
+        if int(guess) != good_pod:
+            print(dedent(f"""
+                you jumped into pod {guess}
+                but it was bad crushing you :( 
+                sorry friend
+                """))
+            return 'death'
+        else:
+            print(dedent(f"""
+                jumped into pod {guess} and its still good!
+                you leave the ship and dont end up dead!
+                """))
+
+            return 'finished'
+
+            
 
 class Finished(Scene):
 
