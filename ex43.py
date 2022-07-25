@@ -77,7 +77,37 @@ class CentralCorridor(Scene):
 class LaserWeaponArmory(Scene):
 
     def enter(self):
-        pass
+        print(dedent("""
+            we get into armory and doing stuff
+            need to get bomb
+            keypad lock 
+            get it wrong 10 times we ded
+            3 digit code
+            """))
+        code = f"{randint(1,9)}{randint(1,9)}{randint(1,9)}"
+        guess = input("[keypad]> ")
+        guesses = 0
+
+        while guess != code and guesses <9:
+            print("BZZZZEDD!")
+            guesses += 1
+            guess = input("[keypad]> ")
+            #for when want to have code to debug for now.
+            #print(f"btw code is {code}")
+        if guess == code:
+            print(dedent("""
+                we did it and its open
+                go back to bridge to place it
+                """))
+            return 'the_bridge'
+        else:
+            print(dedent("""
+                lock buzzes last time and then you die
+                rip
+                """))
+            return 'death'
+
+    
 
 class TheBridge(Scene):
 
