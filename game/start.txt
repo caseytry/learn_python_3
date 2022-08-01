@@ -1,0 +1,14 @@
+what do i want this game to be..
+
+the character is lost in a house
+they need to find a key in a room in order to then get out.
+
+
+
+so a character
+character needs to be able to hold an item (the key)
+door needs to be present
+door cannot open without they key (if statements)
+
+something else will be in the way once get that running
+maybe needing to find an axe or crowbar to open a different door or barrel? that the key is inside of?
