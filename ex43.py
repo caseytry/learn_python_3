@@ -26,6 +26,12 @@ class Engine(object):
         #print out last scene
         current_scene.enter()
 
+class Player(object):
+
+    def __init__(self, health):
+        self.health = health 
+
+
 class Death(Scene):
 
     quips = [
@@ -50,13 +56,14 @@ class CentralCorridor(Scene):
             dodge
             tell a joke
             """))
-
+        print(f"health is {health}")
         action = input("> ")
 
         if action == "shoot":
             print(dedent("""
                 we'll do this in a sec
                 """))
+            health -= 1
             return 'death'
 
         elif action == "dodge":
@@ -198,5 +205,7 @@ class Map(object):
         return self.next_scene(self.start_scene)
 
 a_map = Map('central_corridor')
+a_character = Player(10)
+health = a_character
 a_game = Engine(a_map)
 a_game.play()
