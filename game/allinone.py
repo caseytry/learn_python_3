@@ -1,3 +1,5 @@
+### only being used as i try to figure out
+#how to import better. if can mash into one file and works, not totally blocked.
 class Character(object):
     def __init__(self, name):
         self.name = name
