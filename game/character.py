@@ -1,24 +1,17 @@
 class Character(object):
     def __init__(self, name):
         self.name = name
-        self.inventory = {}
+        self.has_key = False
 
-    def additem(self, item):
-        self.inventory[str(item)]
-    
-    def deleteitem(self, item):
-        del self.inventory[str(item)]
 
-    def displayinventory(self):
-        return self.inventory
 
 
 player = Character(input("Name your character!\n>>"))
 print(f"You named them {player.name}")
 print(f"player is a {player} class")
 
-print(player.displayinventory)
-#weapon = "sword"
-player.additem('weapon': "sword")
+print(f"do you have the key? {player.has_key}")
 
-print(player.inventory)
+player.has_key = True
+
+print(f"do you have the key now? {player.has_key}")
