@@ -12,3 +12,6 @@ door cannot open without they key (if statements)
 
 something else will be in the way once get that running
 maybe needing to find an axe or crowbar to open a different door or barrel? that the key is inside of?
+
+so trying to do a "inventory" may be a bit much for now. what if we just have it be a part of passing a room?
+like an attribute of the player that they initially dont have, and then after getting to the prompt for key, they pass?
