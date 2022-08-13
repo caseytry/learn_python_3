@@ -13,12 +13,20 @@ class FirstRoom(Scene):
     def enter(self):
         print("we are in the first room!")
         print(f"{player.name} key statuts is {player.has_key}")
+        return 'secondroom'
+
+class SecondRoom(Scene):
+
+    def enter(self):
+        print("have we made it to the second  room")
         return exit
+
 
 class Map(object):
 
     scenes = {
-        'firstroom': FirstRoom()
+        'firstroom': FirstRoom(),
+        'secondroom': SecondRoom()
     }
 
     def __init__(self, start_scene):
