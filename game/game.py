@@ -11,9 +11,20 @@ class Scene(object):
 class FirstRoom(Scene):
 
     def enter(self):
-        print("we are in the first room!")
+        print("we are in the first room")
         print(f"{player.name} key statuts is {player.has_key}")
-        return 'secondroom'
+        print("you awake in a room with only one exit. what would you like to do?")
+        action = input ("> ")
+        if action == "exit room":
+            print("you try to go to the second room")
+            return 'secondroom'
+
+        if action == "search":
+            print("""You try to find any hints as to what this place is.
+            While it is clearly not lived in, you dont feel totally unsafe.
+            there must be a way out however..
+            """)
+            return 'firstroom'
 
 class SecondRoom(Scene):
 
@@ -41,13 +52,10 @@ class Map(object):
 
 player = character.Character(input("Name your character!\n>>"))
 print(f"You named them {player.name}")
-print(f"player is a {player} class")
-
-print(f"do you have the key? {player.has_key}")
-
-player.has_key = True
-
-print(f"do you have the key now? {player.has_key}")
+#print(f"player is a {player} class")
+#print(f"do you have the key? {player.has_key}")
+#player.has_key = True
+#print(f"do you have the key now? {player.has_key}")
 
 a_map = Map('firstroom')
 a_game= engine.Engine(a_map)
