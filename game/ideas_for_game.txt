@@ -1,0 +1,46 @@
+Requirements from book:
+
+Here are your requirements:
+
+    Make a different game from the one I made.
+    Use more than one file, and use import to use them. Make sure you know what that is.
+    Use one class per room and give the classes names that fit their purpose (like GoldRoom, KoiPondRoom).
+    Your runner will need to know about these rooms, so make a class that runs them and knows about them. 
+        There's plenty of ways to do this, but consider having each room return what room is next or setting a variable of what room is next.
+
+
+what do i want this game to be..
+
+the character is lost in a house
+they need to find a key in a room in order to then get out.
+
+
+so a character
+        this is its own class.
+character needs to be able to hold an item (the key) 
+        satisfying this with an attribute of the character class.
+door needs to be present
+    need to make the 'exit room'.
+door cannot open without they key (if statements)
+    exit should not open unless attribute is true. 
+
+something else will be in the way once get that running
+
+like an attribute of the player that they initially dont have, and then after getting to the prompt for key, they pass?
+
+
+
+do i want to do a death thing in this one? while the game he made did have it, i think it may be more fitting as a maze rather than "you can die if you mess up"
+
+
+
+
+Completed:
+Use more than one file, and use import to use them. Make sure you know what that is.
+    its kinda simple for now, but AM satisfying this requirement. 
+
+idea ice box:
+
+maybe needing to find an axe or crowbar to open a different door or barrel? that the key is inside of?
+
+so trying to do a "inventory" may be a bit much for now. what if we just have it be a part of passing a room?
