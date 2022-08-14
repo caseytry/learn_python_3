@@ -60,10 +60,10 @@ class LockedDoorRoom(Scene):
             """)
             return "secondroom"
 
-#       quick test for door logic.
-#       if action == "take key":
-#          player.has_key = True
-#          return "secondroom"
+ #       quick test for door logic.
+        if action == "take key":
+           player.has_key = True
+           return "secondroom"
 
         if action == "open locked door":
             if player.has_key == False:
@@ -72,20 +72,26 @@ class LockedDoorRoom(Scene):
 
             if player.has_key == True:
                 print("You insert the key, the deadbolt moves and it is no longer locked!")
-                return exit
+                return 'escape'
 
         if action == "go to first room":
             print ("You head back to the first room")
             return 'firstroom'
             
-
+class Escaped(Scene):
+    
+    def enter(self):
+        print("You go through the door that has been locked and have escaped! How long were we in there?!")
+        print("Congratulations!")
+        exit()
 
 class Map(object):
 
     scenes = {
         'creation': PlayerCreationRoom(),
         'firstroom': FirstRoom(),
-        'secondroom': LockedDoorRoom()
+        'secondroom': LockedDoorRoom(),
+        'escape': Escaped()
     }
 
     def __init__(self, start_scene):
