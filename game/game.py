@@ -8,14 +8,6 @@ class Scene(object):
         print("Subclass it and implement enter().")
         exit(1)
 
-class PlayerCreationRoom(Scene):
-
-    def enter(self):
-        print("Welcome to my game! First step, name your character.")
-        player = character.Character(input("Name your character!\n>>"))
-        print(f"You named them {player.name}. Good Luck!")
-        return 'firstroom'
-
 class FirstRoom(Scene):
 
     def enter(self):
