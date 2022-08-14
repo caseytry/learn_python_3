@@ -47,7 +47,6 @@ class LockedDoorRoom(Scene):
         In this room, aside from the door you just came through, there are two others.
         One of them has a deadbolt lock which is preventing you from getting through.
         The other is open, but can't quite tell whats in side without going in yourself.
-
         What do you do?
         """)
 
