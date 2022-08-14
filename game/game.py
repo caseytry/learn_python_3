@@ -39,7 +39,7 @@ class FirstRoom(Scene):
             print("invalid action")
             return 'firstroom'
 
-class SecondRoom(Scene):
+class LockedDoorRoom(Scene):
 
     def enter(self):
         print("have we made it to the second room")
@@ -73,6 +73,10 @@ class SecondRoom(Scene):
             if player.has_key == True:
                 print("You insert the key, the deadbolt moves and it is no longer locked!")
                 return exit
+
+        if action == "go to first room":
+            print ("You head back to the first room")
+            return 'firstroom'
             
 
 
@@ -81,7 +85,7 @@ class Map(object):
     scenes = {
         'creation': PlayerCreationRoom(),
         'firstroom': FirstRoom(),
-        'secondroom': SecondRoom()
+        'secondroom': LockedDoorRoom()
     }
 
     def __init__(self, start_scene):
