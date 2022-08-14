@@ -1,4 +1,3 @@
-from re import T
 import character
 import engine
 
@@ -129,13 +128,6 @@ class Map(object):
 
     def opening_scene(self):
         return self.next_scene(self.start_scene)
-
-
-#print(f"player is a {player} class")
-#print(f"do you have the key? {player.has_key}")
-#player.has_key = True
-#print(f"do you have the key now? {player.has_key}")
-
 
 a_map = Map('firstroom')
 a_game= engine.Engine(a_map)
