@@ -1,3 +1,4 @@
+from re import T
 import character
 import engine
 
@@ -59,11 +60,6 @@ class LockedDoorRoom(Scene):
             """)
             return "secondroom"
 
- #       quick test for door logic.
-        if action == "take key":
-           player.has_key = True
-           return "secondroom"
-
         if action == "open locked door":
             if player.has_key == False:
                 print("You try to force the door open, but it won't budge.")
@@ -76,7 +72,37 @@ class LockedDoorRoom(Scene):
         if action == "go to first room":
             print ("You head back to the first room")
             return 'firstroom'
-            
+
+        if action == "go to unlocked room":
+            print("You go into the unlocked room")
+            return 'unlockedroom'
+
+class ThirdRoom(Scene):
+
+    def enter(self):
+
+        print("You go into the third room. This room seems very similar to the others, though one corner is dark.")
+        print("What would you like to do?")
+
+        action = input("> ")
+
+        if action == "leave":
+            print("You leave this room and head back to the locked room")
+            return 'secondroom'
+
+        if action == "search":
+            print("""
+            You try to search the dark section of the room. Initially, you just walk around with
+            your arms outstretched to see if you hit something. 
+
+            You don't grab anything, but your foot does kick something small.
+            Cautiously, you bend down and feel around by your feet until you feel it!
+            Its a key!
+            You take the key and put it in your pocket.
+            """)
+            player.has_key = True 
+            return 'secondroom'
+
 class Escaped(Scene):
     
     def enter(self):
@@ -90,6 +116,7 @@ class Map(object):
         'creation': PlayerCreationRoom(),
         'firstroom': FirstRoom(),
         'secondroom': LockedDoorRoom(),
+        'unlockedroom': ThirdRoom(),
         'escape': Escaped()
     }
 
