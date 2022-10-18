@@ -62,17 +62,17 @@ In this Study Drill, try to guess what you think the if-statement is and what it
 
 
 ### My response:
-What do you think the if does to the code under it?
-    After the 'if' statement is evaluated for if it is true or not, the code beneath it is only executed if the statement was True. 
+> What do you think the if does to the code under it?
+After the 'if' statement is evaluated for if it is true or not, the code beneath it is only executed if the statement was True. 
 
-Why does the code under the if need to be indented four spaces?
-    To indicate/ensure that the code is a part of an expression and is only ran if the "If" statement was true.
+> Why does the code under the if need to be indented four spaces?
+To indicate/ensure that the code is a part of an expression and is only ran if the "If" statement was true.
 
-What happens if it isn't indented?
-    You get an IndentationError, where python expects the code to be indented.
+> What happens if it isn't indented?
+You get an IndentationError, where python expects the code to be indented.
 
-Can you put other boolean expressions from Exercise 27 in the if-statement? Try it.
-    I did these updates in the final part of the code, underneath comment
+> Can you put other boolean expressions from Exercise 27 in the if-statement? Try it.
+I did these updates in the final part of the code, underneath comment
 
-What happens if you change the initial values for people, cats, and dogs?
-    The expressions change to the other results (IE: if cats are lower than people, returns the "The world is saved",  if people are less than dogs, returns "The world is drooled on")
+> What happens if you change the initial values for people, cats, and dogs?
+The expressions change to the other results (IE: if cats are lower than people, returns the "The world is saved",  if people are less than dogs, returns "The world is drooled on")
