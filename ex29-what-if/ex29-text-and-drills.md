@@ -2,6 +2,7 @@
 
 Here is the next script of Python you will enter, which introduces you to the if-statement. Type this in, make it run exactly right, and then we'll see if your practice has paid off.
 
+```python
 people = 20
 cats = 30
 dogs = 15
@@ -31,6 +32,7 @@ if people <= dogs:
 
 if people == dogs:
     print("People are dogs.")
+```
 
 
 
