@@ -49,7 +49,7 @@ People are dogs.
 
 
 
-Study Drills
+## Study Drills
 
 In this Study Drill, try to guess what you think the if-statement is and what it does. Try to answer these questions in your own words before moving on to the next exercise:
 
