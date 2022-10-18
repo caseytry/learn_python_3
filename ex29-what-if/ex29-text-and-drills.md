@@ -53,11 +53,11 @@ People are dogs.
 
 In this Study Drill, try to guess what you think the if-statement is and what it does. Try to answer these questions in your own words before moving on to the next exercise:
 
-    What do you think the if does to the code under it?
-    Why does the code under the if need to be indented four spaces?
-    What happens if it isn't indented?
-    Can you put other boolean expressions from Exercise 27 in the if-statement? Try it.
-    What happens if you change the initial values for people, cats, and dogs?
+> What do you think the if does to the code under it?
+> Why does the code under the if need to be indented four spaces?
+> What happens if it isn't indented?
+> Can you put other boolean expressions from Exercise 27 in the if-statement? Try it.
+> What happens if you change the initial values for people, cats, and dogs?
 
 
 
