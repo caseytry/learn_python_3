@@ -38,12 +38,14 @@ if people == dogs:
 
 ## What You Should See
 
+```sh
 $ python3.6 ex29.py
 Too many cats! The world is doomed!
 The world is dry!
 People are greater than or equal to dogs.
 People are less than or equal to dogs.
 People are dogs.
+```
 
 
 
