@@ -72,3 +72,5 @@ The bear eats your legs off.  Good job!
     
     Write a completely new game. Maybe you don't like this one, so make your own. This is your computer; do what you want.
 
+## My Drill responses:
+For the first part, I just added another door with two options that branch from there. While the instructor said to expand it as much as possible, I wanted to spend more time on the "create my own" question instead. I wanted to make sure I could come up with something rather than just expanding forever.
