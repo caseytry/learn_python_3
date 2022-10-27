@@ -104,9 +104,46 @@ OK
 
 That's what you should see if everything is working right. Try causing an error to see what that looks like and then fix it.
 
-##Study Drills
+## Study Drills
 
     Go read about nosetests more, and also read about alternatives.
     Learn about Python's "doc tests," and see if you like them better.
     Make your room more advanced, and then use it to rebuild your game yet again, but this time unit test as you go.
 
+## My Responses:
+
+Go read about nosetests more, and also read about alternatives.
+To start with, the book is showing its age in that nosetests is no longer actively supported, instead a new version, nose2, has been made to continue the ideas nose had for testing.
+
+As I was trying to understand the differences between the tests, a few different frameworks kept coming back and were the main ones I looked into. They are:
+
+unittest/unittest2
+nose/nose2
+py.test
+
+Nose/nose2 were built to extend unittest/unittest2; so I tried to take a look at unittest first.
+
+Unittest does have one starting advantage compared to the others by being a part of the standard Python library, making it so that you dont need to worry about having an additional dependency that you would need to deal with.
+
+One of the common things that others in the community had noted was that unittest tests were longer to write and harder to read than pytest.  I tried to find a quick way to see these differences without needing to spend too long making a bunch of tests myself.  
+
+The way I initially handled this for the differences in testing between unittest and pytest was with the sites https://www.pythonpool.com/python-unittest-vs-pytest/ and https://blog.daftcode.pl/the-cleaning-hand-of-pytest-28f434f4b684
+
+Testing with unittest, the code you need to make for the tests is overall longer due to needing to create a new class for each test you want to do that inherits from the unittest.TestCase. So in addition to making a new class for each test of each function you want to do, the code to enable the tests themselves also have to pass `self` as a parameter to the function, and the functions then start with `self.assert`, which may be a personal preference on if one thinks this makes reading of the code more complex or less complex.  To me personally, the numerous additions of `self` for unittest makes reading the tests seem like they are a bit more bloated than code that would not need all the `self` calls. This may still be due to being overall newer to coding!
+
+
+Nose/Nose2
+Since Nose extends unittest, it seems like it has simplified some of the efforts you would need to do if you did unittest by not always needing to create a new class that inherits from unittest and then dealing with all of the '`self` references. Since it is not a part of the standard library, you are now involving a dependancy that you wouldn't have to deal with in unittest.  
+
+One negative that Nose has right now is that nose is no longer actively supported anymore, and while Nose2 does exist it actively calls out that pytests has a bigger team and community than nose2 does, so it appears that team is trying to push more people towards alternatives than to use its product unless needed for new projects.
+Because of these reasons, and because the book is still going to use Nose as its reference point for right now so I'll get some more exposure to it, I did not continue looking deeper into nose at this time.
+
+Pytest does seem very appealing to me as a framework. One of the things that came up during the research was how Pytest utilizes the default Python assert, instead of needing its own assert methods for trying to test things. This seems very appealing compared to trying to remember/look up all the different assert methods that unittest/nose directly support, since I'd just be using the standard I'd already be using for other parts of python code and not need to context switch.
+
+
+Learn about Python's "doc tests," and see if you like them better.
+
+I read a bit about this testing strategy, but I do not think I like it overall. It seems very clunky/awkward to use since I'd need to remember to add each line that I was looking to test with the >>> prefix as well as maintaining the proper quotation marks in the right place.  While it sounds like it'd work great for some simple things, I do not think I'd explore this further unless need for it came along.
+
+Make your room more advanced, and then use it to rebuild your game yet again, but this time unit test as you go.
+I did this in the code; though I took the 'rebuild your game yet again' to mean the room/game in the tests rather than the game that was made in chapter 45.
