@@ -33,7 +33,8 @@ def test_map():
     assert_equal(west.go('east').go('down').go('up').go('west'), west)
     assert_equal(down.go('up').go('west').go('east'), start)
 
+#my add
     start.add_things({'Bob': 'Male'})
     start.add_things({ 'Mary' : 'Female'})
     west.add_things({'Trees' : 'Object'})
-    assert_equal(start.see('Bob', 'Male'))
+    assert_equal(start.see('Bob'), True)

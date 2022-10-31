@@ -4,6 +4,7 @@ class Room(object):
         self.name = name
         self.description =  description
         self.paths = {}
+ #my add
         self.things = {}
 
     def go(self, direction):
@@ -12,8 +13,10 @@ class Room(object):
     def add_paths(self, paths):
         self.paths.update(paths)
 
-    def see(self, thing, type):
-        return self.things.get(thing, type)
+#my add
+    def see(self, thing):
+#        return self.things[thing]
+        return thing in self.things
 
     def add_things(self, things):
         self.things.update(things)
