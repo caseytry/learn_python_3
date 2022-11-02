@@ -35,6 +35,15 @@ def test_map():
 
 #my add
     start.add_things({'Bob': 'Male'})
-    start.add_things({ 'Mary' : 'Female'})
-    west.add_things({'Trees' : 'Object'})
-    assert_equal(start.see('Bob'), True)
+    start.add_things({'Mary': 'Female'})
+    #rewriting above to be just one entry, "characters"
+    start.add_things({'People': ['Fred', 'Jane', 'Tim']})
+    west.add_things({'Trees': 'Object'})
+    assert_true(start.see('Bob'))
+    assert_in('Fred', start.things['People'][0])
+    assert_in('People', start.things)
+    assert_in('Fred', start.things['People'])
+    assert_not_in('Bob', start.things['People'])
+    assert_true(start.see('People'))
+    assert_true(start.see('Mary'))
+    assert_false(start.see('Trees'))
